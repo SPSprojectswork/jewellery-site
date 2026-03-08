@@ -64,13 +64,13 @@ export default function Home() {
           <ProductCard 
             index={0}
             name="Gold Bangle"
-            image="/products/featured-bangle.jpg"
+            image={`${import.meta.env.BASE_URL}products/featured-bangle.jpg`}
             description="A minimalist hollow gold bangle wrapped in pure 24k essence. Perfect for daily elegance."
           />
           <ProductCard 
             index={1}
             name="Hollow Heart Necklace"
-            image="/products/featured-necklace.jpg"
+            image={`${import.meta.env.BASE_URL}products/featured-necklace.jpg`}
             description="An intricately designed hollow heart pendant suspended on a delicate golden chain."
           />
         </div>

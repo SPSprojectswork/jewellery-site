@@ -146,12 +146,13 @@ export default function Gallery() {
 
   useEffect(() => {
     // Load images from manifest
-    fetch('/products/manifest.json')
+    fetch(`${import.meta.env.BASE_URL}products/manifest.json`)
       .then((r) => r.json())
       .then((files) => {
-        setImages(files.map((f) => ({ src: `/products/${f}`, alt: f.replace(/\.[^.]+$/, '').replace(/-/g, ' ') })))
+        setImages(files.map((f) => ({ src: `${import.meta.env.BASE_URL}products/${f}`, alt: f.replace(/\.[^.]+$/, '').replace(/-/g, ' ') })))
       })
-      .catch(() => {
+      .catch((e) => {
+        console.error('Manifest fetch error:', e);
         // Fallback: show placeholders if manifest not found
         setImages([])
       })

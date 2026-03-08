@@ -2,17 +2,17 @@
 // src/App.jsx
 // =========================================================
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Admin from './pages/Admin.jsx'
 
 export default function App() {
   return (
-    <BrowserRouter basename="/jewellery-site">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
