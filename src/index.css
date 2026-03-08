@@ -1,0 +1,205 @@
+/* =========================================================
+   src/index.css
+   TailwindCSS v4 CSS-first configuration + Luxury Tokens
+   ========================================================= */
+
+@import "tailwindcss";
+
+/* ── Custom Design Tokens ────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-black-luxury: #080808;
+  --color-black-card:   #111111;
+  --color-black-panel:  #181818;
+  --color-gold:         #D4AF37;
+  --color-gold-light:   #FFD700;
+  --color-gold-dark:    #B8962E;
+  --color-gold-muted:   #8B6914;
+  --color-cream:        #FFF8DC;
+  --color-cream-muted:  #F5E6CA;
+  --color-white-soft:   rgba(255,255,255,0.85);
+
+  /* Fonts */
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans:  "Inter", system-ui, sans-serif;
+
+  /* Spacing extras */
+  --spacing-section: 6rem;
+}
+
+/* ── Base Reset ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080808;
+  color: #FFF8DC;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar              { width: 4px; }
+::-webkit-scrollbar-track        { background: #080808; }
+::-webkit-scrollbar-thumb        { background: #D4AF37; border-radius: 4px; }
+
+/* ── Glassmorphism ───────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-dark {
+  background: rgba(8, 8, 8, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* ── Gold Glow Effects ───────────────────────────────────── */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35),
+              0 0 40px rgba(212, 175, 55, 0.15),
+              inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+.glow-gold-hover {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-gold-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
+              0 0 60px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.text-gold        { color: #D4AF37; }
+.text-gold-light  { color: #FFD700; }
+.text-cream       { color: #FFF8DC; }
+.text-cream-muted { color: #F5E6CA; }
+.bg-luxury        { background-color: #080808; }
+.font-serif       { font-family: "Cormorant Garamond", Georgia, serif; }
+
+/* ── Gold Gradient Text ──────────────────────────────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #FFD700 40%, #B8962E 70%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gold Divider ────────────────────────────────────────── */
+.divider-gold {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 1rem auto;
+}
+
+/* ── Floating Keyframe ───────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(5deg); }
+}
+@keyframes particleDrift {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-100vh) translateX(30px) scale(0.5); opacity: 0; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes pulse-gold {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 10px rgba(212,175,55,0.3); }
+  50%       { opacity: 1;   box-shadow: 0 0 30px rgba(212,175,55,0.8); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.5; }
+}
+
+.animate-float      { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.animate-scroll-bounce { animation: scrollBounce 1.5s ease-in-out infinite; }
+
+/* ── Button Base ─────────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #D4AF37, #FFD700, #B8962E);
+  background-size: 200% 200%;
+  color: #080808;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.btn-gold:hover {
+  background-position: right center;
+  box-shadow: 0 0 25px rgba(212,175,55,0.6), 0 4px 20px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 27px;
+  background: transparent;
+  color: #D4AF37;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #D4AF37;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.btn-outline-gold:hover {
+  background: rgba(212,175,55,0.08);
+  box-shadow: 0 0 20px rgba(212,175,55,0.35);
+  transform: translateY(-2px);
+}
+
+/* ── Section Headings ────────────────────────────────────── */
+.section-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: #FFF8DC;
+}
+
+.section-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D4AF37;
+}
