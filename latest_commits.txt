@@ -1,0 +1,8 @@
+﻿6ccd7fa Updated gallery images in manifest
+e6c5caf Fix image extensions in gallery manifest
+989b909 updated product images
+302fa29 updated product images to new versions
+4ddb9dd Fix asset paths and routing for GitHub pages
+18bbe9d Fix React Router basename for GitHub Pages
+2d99d18 Add GitHub Pages deployment configuration
+37b32c2 Initial commit: Luxury Jewellery Website
