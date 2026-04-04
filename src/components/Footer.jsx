@@ -3,7 +3,7 @@
 // Minimal luxury footer with brand tagline & social icons.
 // =========================================================
 import React from 'react'
-import { Instagram, Facebook, Twitter, ShieldCheck } from 'lucide-react'
+import { Instagram, ShieldCheck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -17,14 +17,13 @@ export default function Footer() {
         
         {/* Brand Name */}
         <h2 style={{
-          fontFamily: '"Playfair Display", serif',
-          fontSize: '2rem',
-          fontWeight: 300,
-          color: '#2D7D5F',
-          letterSpacing: '0.1em',
+          fontFamily: '"Great Vibes", cursive',
+          fontSize: '3.5rem',
+          fontWeight: 400,
+          color: '#ffffff',
           marginBottom: '0.5rem',
         }}>
-          LUMIÈRE JEWELS
+          pearlyn accessories
         </h2>
 
         {/* Tagline */}
@@ -46,14 +45,8 @@ export default function Footer() {
           gap: '1.5rem',
           marginBottom: '3rem',
         }}>
-          <a href="#" className="text-gold-muted hover:text-gold" style={{ transition: 'color 0.3s' }}>
+          <a href="https://instagram.com/pearlyn.co_" target="_blank" className="text-gold-muted hover:text-gold" style={{ transition: 'color 0.3s' }}>
             <Instagram size={20} />
-          </a>
-          <a href="#" className="text-gold-muted hover:text-gold" style={{ transition: 'color 0.3s' }}>
-            <Facebook size={20} />
-          </a>
-          <a href="#" className="text-gold-muted hover:text-gold" style={{ transition: 'color 0.3s' }}>
-            <Twitter size={20} />
           </a>
         </div>
 
@@ -74,7 +67,7 @@ export default function Footer() {
             <ShieldCheck size={14} color="#2D7D5F" />
             <span>100% Secure Checkout & Worldwide Shipping</span>
           </div>
-          <p>© {new Date().getFullYear()} Lumière Jewels. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} pearlyn accessories. All rights reserved.</p>
         </div>
         
       </div>

@@ -140,7 +140,7 @@ export default function ProductCard({ name, image, description, index = 0, onIma
               justifyContent: 'center',
               gap: '8px',
               padding: '11px',
-              background: 'linear-gradient(135deg, #2D7D5F, #3a9e7a, #c9a84c)',
+              background: 'linear-gradient(135deg, #2D7D5F, #3a9e7a, #ffffff)',
               color: '#f5f7f5',
               fontFamily: '"Courier New", sans-serif',
               fontSize: '0.8rem',

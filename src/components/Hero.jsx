@@ -65,6 +65,24 @@ export default function Hero() {
         background: 'transparent',
       }}
     >
+      {/* Logo in top-left corner */}
+      <img 
+        src={`${import.meta.env.BASE_URL}logo.png`} 
+        alt="Pearlyn Logo" 
+        style={{ 
+          position: 'absolute',
+          top: '40px',
+          left: '40px',
+          zIndex: 50,
+          height: '140px', 
+          width: '140px',
+          objectFit: 'cover',
+          borderRadius: '50%',
+          border: '2px solid #ffffff',
+          boxShadow: '0 0 20px rgba(0,0,0,0.3)',
+        }} 
+      />
+
       {/* 3D Canvas removed */}
 
       {/* Particle field */}
@@ -92,21 +110,28 @@ export default function Hero() {
           maxWidth: '800px',
         }}
       >
-        {/* Eyebrow tag */}
+        {/* Eyebrow tag & Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{
-            display: 'inline-flex',
+            display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
-            gap: '8px',
+            gap: '12px',
             marginBottom: '1.5rem',
           }}
         >
-          <Gem size={14} color="#2D7D5F" />
-          <span className="section-sub">Est. Craftsmanship · Since 2005</span>
-          <Gem size={14} color="#2D7D5F" />
+
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Gem size={14} color="#2D7D5F" />
+            <span className="section-sub">
+              <span style={{ fontFamily: '"Great Vibes", cursive', fontSize: '1.8rem', textTransform: 'none', letterSpacing: 'normal', color: '#ffffff', fontWeight: '400', paddingRight: '6px' }}>pearlyn accessories</span>
+              · Est. Craftsmanship · Since 2005
+            </span>
+            <Gem size={14} color="#2D7D5F" />
+          </div>
         </motion.div>
 
         {/* Main heading */}

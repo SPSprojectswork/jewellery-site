@@ -8,9 +8,9 @@ import { motion } from 'framer-motion'
 import { MessageCircle, Instagram, Phone, Sparkles } from 'lucide-react'
 
 /* ── Update these with real contact details ──────────────── */
-const WHATSAPP_NUMBER = '919999999999'
-const INSTAGRAM_URL   = 'https://instagram.com/lumierejewels'
-const PHONE_NUMBER    = 'tel:+919999999999'
+const WHATSAPP_NUMBER = '916379892595'
+const INSTAGRAM_URL   = 'https://ig.me/m/pearlyn.co_'
+const PHONE_NUMBER    = 'tel:+916379892595'
 
 const BUTTONS = [
   {

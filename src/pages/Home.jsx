@@ -55,7 +55,7 @@ export default function Home() {
               <h3 style={{ 
                 fontFamily: '"Playfair Display", serif', 
                 fontSize: '2.5rem', 
-                color: '#c9a84c',
+                color: '#ffffff',
                 marginBottom: '2.5rem',
                 textTransform: 'capitalize' 
               }}>

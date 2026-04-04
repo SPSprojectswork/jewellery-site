@@ -88,7 +88,7 @@ export default function Features() {
                 borderRadius: '10px',
                 background: 'rgba(255,255,255,0.03)',
                 backdropFilter: 'blur(12px)',
-                border: '1px solid rgba(45, 125, 95,0.12)',
+                border: '1px solid #ffffff',
                 transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
                 cursor: 'default',
               }}
@@ -124,8 +124,10 @@ export default function Features() {
                 {f.title}
               </h3>
               <p style={{
-                fontSize: '0.83rem',
-                color: 'rgba(245,230,202,0.55)',
+                fontSize: '0.9rem',
+                color: '#1a1a1a',
+                fontFamily: '"Courier New", sans-serif',
+                fontWeight: 600,
                 lineHeight: 1.7,
               }}>
                 {f.desc}

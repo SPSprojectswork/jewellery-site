@@ -13,7 +13,7 @@
   --color-black-panel:  #ffffff;
   --color-gold:         #2D7D5F;
   --color-gold-light:   #3a9e7a;
-  --color-gold-dark:    #c9a84c;
+  --color-gold-dark:    #ffffff;
   --color-gold-muted:   #8B6914;
   --color-cream:        #1a1a1a;
   --color-cream-muted:  #6b7280;
@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 60%, #c9a84c 100%);
+  background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 60%, #ffffff 100%);
   color: #ffffff;
   font-family: "Courier New", system-ui, sans-serif;
   overflow-x: hidden;
@@ -87,12 +87,12 @@ body {
 .text-gold-light  { color: #3a9e7a; }
 .text-cream       { color: #ffffff; }
 .text-cream-muted { color: #e5e7eb; }
-.bg-luxury        { background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 60%, #c9a84c 100%); }
+.bg-luxury        { background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 60%, #ffffff 100%); }
 .font-serif       { font-family: "Playfair Display", Georgia, serif; }
 
 /* ── Gold Gradient Text ──────────────────────────────────── */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 40%, #c9a84c 70%, #2D7D5F 100%);
+  background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 40%, #ffffff 70%, #2D7D5F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -144,7 +144,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #2D7D5F, #3a9e7a, #c9a84c);
+  background: linear-gradient(135deg, #2D7D5F, #3a9e7a, #ffffff);
   background-size: 200% 200%;
   color: #f5f7f5;
   font-family: "Courier New", sans-serif;
