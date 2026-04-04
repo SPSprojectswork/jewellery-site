@@ -52,7 +52,7 @@ function GoldRing() {
       {/* Decorative thin outer halo ring */}
       <Torus args={[1.45, 0.03, 16, 100]}>
         <meshStandardMaterial
-          color="#FFD700"
+          color="#3a9e7a"
           metalness={1}
           roughness={0.05}
           transparent
@@ -84,7 +84,7 @@ function GlowOrb() {
     ref.current.intensity = 1.8 + Math.sin(t * 0.8) * 0.6
   })
   return (
-    <pointLight ref={ref} position={[2, 2, 2]} color="#FFD700" intensity={1.8} distance={8} />
+    <pointLight ref={ref} position={[2, 2, 2]} color="#3a9e7a" intensity={1.8} distance={8} />
   )
 }
 
@@ -97,9 +97,9 @@ export default function ThreeScene() {
       style={{ position: 'absolute', inset: 0, zIndex: 1 }}
     >
       {/* Lighting */}
-      <ambientLight intensity={0.3} color="#FFF8DC" />
+      <ambientLight intensity={0.3} color="#1a1a1a" />
       <GlowOrb />
-      <pointLight position={[-3, -2, -3]} color="#B8962E" intensity={0.8} distance={10} />
+      <pointLight position={[-3, -2, -3]} color="#c9a84c" intensity={0.8} distance={10} />
       <pointLight position={[0, 3, 1]}   color="#FFFFFF"  intensity={0.5} distance={10} />
 
       {/* Environment reflections */}

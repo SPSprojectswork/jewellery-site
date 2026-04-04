@@ -8,20 +8,20 @@
 /* ── Custom Design Tokens ────────────────────────────────── */
 @theme {
   /* Colors */
-  --color-black-luxury: #080808;
-  --color-black-card:   #111111;
-  --color-black-panel:  #181818;
-  --color-gold:         #D4AF37;
-  --color-gold-light:   #FFD700;
-  --color-gold-dark:    #B8962E;
+  --color-black-luxury: #f5f7f5;
+  --color-black-card:   #ffffff;
+  --color-black-panel:  #ffffff;
+  --color-gold:         #2D7D5F;
+  --color-gold-light:   #3a9e7a;
+  --color-gold-dark:    #c9a84c;
   --color-gold-muted:   #8B6914;
-  --color-cream:        #FFF8DC;
-  --color-cream-muted:  #F5E6CA;
+  --color-cream:        #1a1a1a;
+  --color-cream-muted:  #6b7280;
   --color-white-soft:   rgba(255,255,255,0.85);
 
   /* Fonts */
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans:  "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans:  "Courier New", system-ui, sans-serif;
 
   /* Spacing extras */
   --spacing-section: 6rem;
@@ -39,59 +39,59 @@ html {
 }
 
 body {
-  background-color: #080808;
-  color: #FFF8DC;
-  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f5f7f5;
+  color: #1a1a1a;
+  font-family: "Courier New", system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar              { width: 4px; }
-::-webkit-scrollbar-track        { background: #080808; }
-::-webkit-scrollbar-thumb        { background: #D4AF37; border-radius: 4px; }
+::-webkit-scrollbar-track        { background: #f5f7f5; }
+::-webkit-scrollbar-thumb        { background: #2D7D5F; border-radius: 4px; }
 
 /* ── Glassmorphism ───────────────────────────────────────── */
 .glass {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(45, 125, 95, 0.15);
 }
 
 .glass-dark {
   background: rgba(8, 8, 8, 0.65);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(45, 125, 95, 0.1);
 }
 
 /* ── Gold Glow Effects ───────────────────────────────────── */
 .glow-gold {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35),
-              0 0 40px rgba(212, 175, 55, 0.15),
-              inset 0 0 20px rgba(212, 175, 55, 0.05);
+  box-shadow: 0 0 20px rgba(45, 125, 95, 0.35),
+              0 0 40px rgba(45, 125, 95, 0.15),
+              inset 0 0 20px rgba(45, 125, 95, 0.05);
 }
 
 .glow-gold-hover {
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glow-gold-hover:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
-              0 0 60px rgba(212, 175, 55, 0.25);
-  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 30px rgba(45, 125, 95, 0.5),
+              0 0 60px rgba(45, 125, 95, 0.25);
+  border-color: rgba(45, 125, 95, 0.6);
 }
 
-.text-gold        { color: #D4AF37; }
-.text-gold-light  { color: #FFD700; }
-.text-cream       { color: #FFF8DC; }
-.text-cream-muted { color: #F5E6CA; }
-.bg-luxury        { background-color: #080808; }
-.font-serif       { font-family: "Cormorant Garamond", Georgia, serif; }
+.text-gold        { color: #2D7D5F; }
+.text-gold-light  { color: #3a9e7a; }
+.text-cream       { color: #1a1a1a; }
+.text-cream-muted { color: #6b7280; }
+.bg-luxury        { background-color: #f5f7f5; }
+.font-serif       { font-family: "Playfair Display", Georgia, serif; }
 
 /* ── Gold Gradient Text ──────────────────────────────────── */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #FFD700 40%, #B8962E 70%, #D4AF37 100%);
+  background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 40%, #c9a84c 70%, #2D7D5F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,7 +101,7 @@ body {
 .divider-gold {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  background: linear-gradient(90deg, transparent, #2D7D5F, transparent);
   margin: 1rem auto;
 }
 
@@ -125,8 +125,8 @@ body {
   100% { background-position:  200% center; }
 }
 @keyframes pulse-gold {
-  0%, 100% { opacity: 0.4; box-shadow: 0 0 10px rgba(212,175,55,0.3); }
-  50%       { opacity: 1;   box-shadow: 0 0 30px rgba(212,175,55,0.8); }
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 10px rgba(45, 125, 95,0.3); }
+  50%       { opacity: 1;   box-shadow: 0 0 30px rgba(45, 125, 95,0.8); }
 }
 @keyframes scrollBounce {
   0%, 100% { transform: translateY(0); opacity: 1; }
@@ -143,10 +143,10 @@ body {
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #D4AF37, #FFD700, #B8962E);
+  background: linear-gradient(135deg, #2D7D5F, #3a9e7a, #c9a84c);
   background-size: 200% 200%;
-  color: #080808;
-  font-family: "Inter", sans-serif;
+  color: #f5f7f5;
+  font-family: "Courier New", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -158,7 +158,7 @@ body {
 }
 .btn-gold:hover {
   background-position: right center;
-  box-shadow: 0 0 25px rgba(212,175,55,0.6), 0 4px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 25px rgba(45, 125, 95,0.6), 0 4px 20px rgba(0,0,0,0.4);
   transform: translateY(-2px);
 }
 
@@ -168,38 +168,38 @@ body {
   gap: 8px;
   padding: 11px 27px;
   background: transparent;
-  color: #D4AF37;
-  font-family: "Inter", sans-serif;
+  color: #2D7D5F;
+  font-family: "Courier New", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 1px solid #D4AF37;
+  border: 1px solid #2D7D5F;
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.35s ease;
 }
 .btn-outline-gold:hover {
-  background: rgba(212,175,55,0.08);
-  box-shadow: 0 0 20px rgba(212,175,55,0.35);
+  background: rgba(45, 125, 95,0.08);
+  box-shadow: 0 0 20px rgba(45, 125, 95,0.35);
   transform: translateY(-2px);
 }
 
 /* ── Section Headings ────────────────────────────────────── */
 .section-heading {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 300;
   letter-spacing: 0.04em;
   line-height: 1.1;
-  color: #FFF8DC;
+  color: #1a1a1a;
 }
 
 .section-sub {
-  font-family: "Inter", sans-serif;
+  font-family: "Courier New", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #D4AF37;
+  color: #2D7D5F;
 }

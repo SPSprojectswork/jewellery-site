@@ -10,17 +10,17 @@ export default function Footer() {
     <footer style={{
       padding: '4rem 1.5rem 2rem',
       background: '#040404',
-      borderTop: '1px solid rgba(212,175,55,0.1)',
+      borderTop: '1px solid rgba(45, 125, 95,0.1)',
       textAlign: 'center',
     }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         
         {/* Brand Name */}
         <h2 style={{
-          fontFamily: '"Cormorant Garamond", serif',
+          fontFamily: '"Playfair Display", serif',
           fontSize: '2rem',
           fontWeight: 300,
-          color: '#D4AF37',
+          color: '#2D7D5F',
           letterSpacing: '0.1em',
           marginBottom: '0.5rem',
         }}>
@@ -29,7 +29,7 @@ export default function Footer() {
 
         {/* Tagline */}
         <p style={{
-          fontFamily: '"Cormorant Garamond", serif',
+          fontFamily: '"Playfair Display", serif',
           fontSize: '1.1rem',
           fontStyle: 'italic',
           color: 'rgba(245,230,202,0.6)',
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ width: '100%', height: '1px', background: 'rgba(212,175,55,0.1)', marginBottom: '2rem' }} />
+        <div style={{ width: '100%', height: '1px', background: 'rgba(45, 125, 95,0.1)', marginBottom: '2rem' }} />
 
         {/* Bottom */}
         <div style={{
@@ -71,7 +71,7 @@ export default function Footer() {
           letterSpacing: '0.05em',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <ShieldCheck size={14} color="#D4AF37" />
+            <ShieldCheck size={14} color="#2D7D5F" />
             <span>100% Secure Checkout & Worldwide Shipping</span>
           </div>
           <p>© {new Date().getFullYear()} Lumière Jewels. All rights reserved.</p>

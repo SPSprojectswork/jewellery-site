@@ -33,8 +33,8 @@ const BUTTONS = [
   {
     label: 'Call Us',
     icon: Phone,
-    color: '#D4AF37',
-    glow: 'rgba(212,175,55,0.4)',
+    color: '#2D7D5F',
+    glow: 'rgba(45, 125, 95,0.4)',
     action: () => window.open(PHONE_NUMBER),
   },
 ]
@@ -58,7 +58,7 @@ function ContactButton({ label, icon: Icon, color, glow, action, index }) {
         border: `1px solid ${color}55`,
         borderRadius: '6px',
         color: color,
-        fontFamily: '"Inter", sans-serif',
+        fontFamily: '"Courier New", sans-serif',
         fontSize: '0.85rem',
         fontWeight: 600,
         letterSpacing: '0.1em',
@@ -85,7 +85,7 @@ export default function Contact() {
       id="contact"
       style={{
         padding: '7rem 1.5rem',
-        background: 'linear-gradient(180deg, #080808 0%, #0d0b07 50%, #080808 100%)',
+        background: 'linear-gradient(180deg, #f5f7f5 0%, #0d0b07 50%, #f5f7f5 100%)',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -99,7 +99,7 @@ export default function Contact() {
         transform: 'translate(-50%,-50%)',
         width: '600px',
         height: '300px',
-        background: 'radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(45, 125, 95,0.07) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -116,29 +116,29 @@ export default function Contact() {
           background: 'rgba(255,255,255,0.03)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(212,175,55,0.15)',
+          border: '1px solid rgba(45, 125, 95,0.15)',
           borderRadius: '12px',
-          boxShadow: '0 0 60px rgba(212,175,55,0.08), 0 20px 60px rgba(0,0,0,0.5)',
+          boxShadow: '0 0 60px rgba(45, 125, 95,0.08), 0 20px 60px rgba(0,0,0,0.5)',
           position: 'relative',
         }}
       >
         {/* Top sparkle */}
         <div style={{ marginBottom: '1.5rem' }}>
-          <Sparkles size={28} color="#D4AF37" style={{ animation: 'pulse-gold 2s ease-in-out infinite' }} />
+          <Sparkles size={28} color="#2D7D5F" style={{ animation: 'pulse-gold 2s ease-in-out infinite' }} />
         </div>
 
         <p className="section-sub" style={{ marginBottom: '1rem' }}>Get in Touch</p>
 
         <h2 className="section-heading" style={{ marginBottom: '0.75rem' }}>
-          Interested in this design?
+          Courier Newested in this design?
         </h2>
 
         <p style={{
-          fontFamily: '"Cormorant Garamond", serif',
+          fontFamily: '"Playfair Display", serif',
           fontSize: '1.25rem',
           fontStyle: 'italic',
           fontWeight: 300,
-          color: '#F5E6CA',
+          color: '#6b7280',
           marginBottom: '2rem',
           opacity: 0.8,
         }}>

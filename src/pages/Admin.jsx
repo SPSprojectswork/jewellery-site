@@ -69,8 +69,8 @@ export default function Admin() {
       minHeight: '100vh',
       background: '#040404',
       padding: '4rem 1.5rem',
-      fontFamily: '"Inter", sans-serif',
-      color: '#FFF8DC'
+      fontFamily: '"Courier New", sans-serif',
+      color: '#1a1a1a'
     }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         
@@ -78,9 +78,9 @@ export default function Admin() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
           <div>
             <h1 style={{
-              fontFamily: '"Cormorant Garamond", serif',
+              fontFamily: '"Playfair Display", serif',
               fontSize: '2.5rem',
-              color: '#D4AF37',
+              color: '#2D7D5F',
               marginBottom: '0.5rem'
             }}>
               Lumière Admin
@@ -89,10 +89,10 @@ export default function Admin() {
           </div>
           <Link to="/" style={{
             display: 'flex', alignItems: 'center', gap: '8px',
-            color: '#D4AF37', textDecoration: 'none', borderBottom: '1px solid transparent',
+            color: '#2D7D5F', textDecoration: 'none', borderBottom: '1px solid transparent',
             transition: 'border-color 0.3s'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.borderBottom = '1px solid #D4AF37'}
+          onMouseEnter={(e) => e.currentTarget.style.borderBottom = '1px solid #2D7D5F'}
           onMouseLeave={(e) => e.currentTarget.style.borderBottom = '1px solid transparent'}
           >
             <ArrowLeft size={16} /> Back to Site
@@ -104,8 +104,8 @@ export default function Admin() {
           {...getRootProps()}
           style={{
             padding: '4rem 2rem',
-            background: isDragActive ? 'rgba(212,175,55,0.08)' : 'rgba(255,255,255,0.02)',
-            border: `2px dashed ${isDragActive ? '#D4AF37' : 'rgba(212,175,55,0.2)'}`,
+            background: isDragActive ? 'rgba(45, 125, 95,0.08)' : 'rgba(255,255,255,0.02)',
+            border: `2px dashed ${isDragActive ? '#2D7D5F' : 'rgba(45, 125, 95,0.2)'}`,
             borderRadius: '12px',
             textAlign: 'center',
             cursor: 'pointer',
@@ -116,7 +116,7 @@ export default function Admin() {
           <input {...getInputProps()} />
           <UploadCloud 
             size={48} 
-            color={isDragActive ? '#FFD700' : '#D4AF37'} 
+            color={isDragActive ? '#3a9e7a' : '#2D7D5F'} 
             style={{ margin: '0 auto 1rem', transition: 'color 0.3s' }} 
           />
           <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>
@@ -149,11 +149,11 @@ export default function Admin() {
         {files.length > 0 && (
           <div style={{
             background: 'rgba(255,255,255,0.02)',
-            border: '1px solid rgba(212,175,55,0.1)',
+            border: '1px solid rgba(45, 125, 95,0.1)',
             borderRadius: '12px',
             padding: '2rem',
           }}>
-            <h4 style={{ marginBottom: '1.5rem', color: '#D4AF37', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <h4 style={{ marginBottom: '1.5rem', color: '#2D7D5F', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <FileImage size={18} /> Selected Images ({files.length})
             </h4>
             
@@ -188,8 +188,8 @@ export default function Admin() {
                 style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   padding: '12px 28px',
-                  background: 'linear-gradient(135deg, #D4AF37, #B8962E)',
-                  color: '#080808',
+                  background: 'linear-gradient(135deg, #2D7D5F, #c9a84c)',
+                  color: '#f5f7f5',
                   border: 'none', borderRadius: '4px',
                   fontWeight: 600, textTransform: 'uppercase', cursor: uploading ? 'not-allowed' : 'pointer',
                   opacity: uploading ? 0.7 : 1, transition: 'all 0.3s'

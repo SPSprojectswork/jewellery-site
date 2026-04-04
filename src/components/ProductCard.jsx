@@ -59,10 +59,10 @@ export default function ProductCard({ name, image, description, index = 0 }) {
           background: 'rgba(255,255,255,0.04)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          border: `1px solid ${isHovered ? 'rgba(212,175,55,0.55)' : 'rgba(212,175,55,0.18)'}`,
+          border: `1px solid ${isHovered ? 'rgba(45, 125, 95,0.55)' : 'rgba(45, 125, 95,0.18)'}`,
           boxShadow: isHovered
-            ? '0 0 35px rgba(212,175,55,0.45), 0 20px 60px rgba(0,0,0,0.7), inset 0 0 25px rgba(212,175,55,0.06)'
-            : '0 8px 32px rgba(0,0,0,0.5), inset 0 0 10px rgba(212,175,55,0.03)',
+            ? '0 0 35px rgba(45, 125, 95,0.45), 0 20px 60px rgba(0,0,0,0.7), inset 0 0 25px rgba(45, 125, 95,0.06)'
+            : '0 8px 32px rgba(0,0,0,0.5), inset 0 0 10px rgba(45, 125, 95,0.03)',
           transition: 'box-shadow 0.4s ease, border-color 0.4s ease, transform 0.05s linear',
         }}
       >
@@ -90,7 +90,7 @@ export default function ProductCard({ name, image, description, index = 0 }) {
             position: 'absolute',
             inset: 0,
             background: isHovered
-              ? 'linear-gradient(135deg, rgba(212,175,55,0.12), transparent 60%)'
+              ? 'linear-gradient(135deg, rgba(45, 125, 95,0.12), transparent 60%)'
               : 'transparent',
             transition: 'background 0.4s ease',
           }} />
@@ -104,12 +104,12 @@ export default function ProductCard({ name, image, description, index = 0 }) {
             gap: '4px',
             background: 'rgba(8,8,8,0.7)',
             backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(212,175,55,0.3)',
+            border: '1px solid rgba(45, 125, 95,0.3)',
             borderRadius: '20px',
             padding: '4px 10px',
           }}>
-            <Sparkles size={11} color="#D4AF37" />
-            <span style={{ fontSize: '0.65rem', color: '#D4AF37', fontWeight: 600, letterSpacing: '0.1em' }}>
+            <Sparkles size={11} color="#2D7D5F" />
+            <span style={{ fontSize: '0.65rem', color: '#2D7D5F', fontWeight: 600, letterSpacing: '0.1em' }}>
               EXCLUSIVE
             </span>
           </div>
@@ -118,10 +118,10 @@ export default function ProductCard({ name, image, description, index = 0 }) {
         {/* Card Body */}
         <div style={{ padding: '1.5rem' }}>
           <h3 style={{
-            fontFamily: '"Cormorant Garamond", serif',
+            fontFamily: '"Playfair Display", serif',
             fontSize: '1.5rem',
             fontWeight: 400,
-            color: '#FFF8DC',
+            color: '#1a1a1a',
             marginBottom: '0.5rem',
             letterSpacing: '0.02em',
           }}>
@@ -151,9 +151,9 @@ export default function ProductCard({ name, image, description, index = 0 }) {
               justifyContent: 'center',
               gap: '8px',
               padding: '11px',
-              background: 'linear-gradient(135deg, #D4AF37, #FFD700, #B8962E)',
-              color: '#080808',
-              fontFamily: '"Inter", sans-serif',
+              background: 'linear-gradient(135deg, #2D7D5F, #3a9e7a, #c9a84c)',
+              color: '#f5f7f5',
+              fontFamily: '"Courier New", sans-serif',
               fontSize: '0.8rem',
               fontWeight: 700,
               letterSpacing: '0.12em',
@@ -162,14 +162,14 @@ export default function ProductCard({ name, image, description, index = 0 }) {
               borderRadius: '4px',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: '0 4px 15px rgba(212,175,55,0.3)',
+              boxShadow: '0 4px 15px rgba(45, 125, 95,0.3)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 6px 25px rgba(212,175,55,0.6)'
+              e.currentTarget.style.boxShadow = '0 6px 25px rgba(45, 125, 95,0.6)'
               e.currentTarget.style.transform = 'translateY(-1px)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 4px 15px rgba(212,175,55,0.3)'
+              e.currentTarget.style.boxShadow = '0 4px 15px rgba(45, 125, 95,0.3)'
               e.currentTarget.style.transform = 'translateY(0)'
             }}
           >

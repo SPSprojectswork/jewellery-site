@@ -31,7 +31,7 @@ function ParticleField({ count = 80 }) {
               width:  `${size}px`,
               height: `${size}px`,
               borderRadius: '50%',
-              background: `radial-gradient(circle, #FFD700, #D4AF37)`,
+              background: `radial-gradient(circle, #3a9e7a, #2D7D5F)`,
               opacity,
               animation: `particleDrift ${dur}s ${delay}s ease-in infinite`,
             }}
@@ -63,7 +63,7 @@ export default function Hero() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'radial-gradient(ellipse at 60% 40%, #1a120a 0%, #0d0d0d 40%, #080808 100%)',
+        background: 'radial-gradient(ellipse at 60% 40%, #1a120a 0%, #0d0d0d 40%, #f5f7f5 100%)',
       }}
     >
       {/* 3D Canvas */}
@@ -106,9 +106,9 @@ export default function Hero() {
             marginBottom: '1.5rem',
           }}
         >
-          <Gem size={14} color="#D4AF37" />
+          <Gem size={14} color="#2D7D5F" />
           <span className="section-sub">Est. Craftsmanship · Since 2005</span>
-          <Gem size={14} color="#D4AF37" />
+          <Gem size={14} color="#2D7D5F" />
         </motion.div>
 
         {/* Main heading */}
@@ -128,11 +128,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.65 }}
           style={{
-            fontFamily: '"Cormorant Garamond", serif',
+            fontFamily: '"Playfair Display", serif',
             fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
             fontWeight: 300,
             fontStyle: 'italic',
-            color: '#F5E6CA',
+            color: '#6b7280',
             marginBottom: '2.5rem',
             letterSpacing: '0.02em',
             lineHeight: 1.6,
@@ -186,10 +186,10 @@ export default function Hero() {
           userSelect: 'none',
         }}
       >
-        <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: '#D4AF37', textTransform: 'uppercase' }}>
+        <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: '#2D7D5F', textTransform: 'uppercase' }}>
           Scroll
         </span>
-        <ChevronDown size={20} color="#D4AF37" className="animate-scroll-bounce" />
+        <ChevronDown size={20} color="#2D7D5F" className="animate-scroll-bounce" />
       </motion.div>
     </section>
   )

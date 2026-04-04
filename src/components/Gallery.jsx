@@ -40,8 +40,8 @@ function Lightbox({ src, alt, onClose }) {
           maxHeight: '90vh',
           objectFit: 'contain',
           borderRadius: '8px',
-          border: '1px solid rgba(212,175,55,0.3)',
-          boxShadow: '0 0 60px rgba(212,175,55,0.3)',
+          border: '1px solid rgba(45, 125, 95,0.3)',
+          boxShadow: '0 0 60px rgba(45, 125, 95,0.3)',
         }}
       />
       <button
@@ -50,9 +50,9 @@ function Lightbox({ src, alt, onClose }) {
           position: 'absolute',
           top: '1.5rem',
           right: '1.5rem',
-          background: 'rgba(212,175,55,0.15)',
-          border: '1px solid rgba(212,175,55,0.4)',
-          color: '#D4AF37',
+          background: 'rgba(45, 125, 95,0.15)',
+          border: '1px solid rgba(45, 125, 95,0.4)',
+          color: '#2D7D5F',
           borderRadius: '50%',
           width: '40px',
           height: '40px',
@@ -92,8 +92,8 @@ function GalleryItem({ src, alt, index, onOpen }) {
         overflow: 'hidden',
         cursor: 'pointer',
         height: `${height}px`,
-        border: `1px solid ${hovered ? 'rgba(212,175,55,0.45)' : 'rgba(212,175,55,0.08)'}`,
-        boxShadow: hovered ? '0 0 25px rgba(212,175,55,0.3)' : '0 4px 20px rgba(0,0,0,0.4)',
+        border: `1px solid ${hovered ? 'rgba(45, 125, 95,0.45)' : 'rgba(45, 125, 95,0.08)'}`,
+        boxShadow: hovered ? '0 0 25px rgba(45, 125, 95,0.3)' : '0 4px 20px rgba(0,0,0,0.4)',
         transition: 'border-color 0.3s, box-shadow 0.3s',
       }}
     >
@@ -124,13 +124,13 @@ function GalleryItem({ src, alt, index, onOpen }) {
             width: '48px',
             height: '48px',
             borderRadius: '50%',
-            background: 'rgba(212,175,55,0.2)',
-            border: '1px solid rgba(212,175,55,0.5)',
+            background: 'rgba(45, 125, 95,0.2)',
+            border: '1px solid rgba(45, 125, 95,0.5)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <ZoomIn size={22} color="#D4AF37" />
+            <ZoomIn size={22} color="#2D7D5F" />
           </div>
         )}
       </div>
@@ -162,7 +162,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      style={{ padding: '6rem 1.5rem', background: '#080808', textAlign: 'center' }}
+      style={{ padding: '6rem 1.5rem', background: '#f5f7f5', textAlign: 'center' }}
     >
       {/* Header */}
       <motion.div
@@ -186,14 +186,14 @@ export default function Gallery() {
       ) : images.length === 0 ? (
         <div style={{
           padding: '3rem',
-          border: '1px dashed rgba(212,175,55,0.2)',
+          border: '1px dashed rgba(45, 125, 95,0.2)',
           borderRadius: '8px',
           maxWidth: '500px',
           margin: '0 auto',
         }}>
           <p style={{ color: 'rgba(245,230,202,0.4)', fontStyle: 'italic' }}>
             No gallery images yet. Upload images from the{' '}
-            <a href="/admin" style={{ color: '#D4AF37', textDecoration: 'underline' }}>Admin page</a>.
+            <a href="/admin" style={{ color: '#2D7D5F', textDecoration: 'underline' }}>Admin page</a>.
           </p>
         </div>
       ) : (

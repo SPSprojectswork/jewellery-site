@@ -45,7 +45,7 @@ export default function Features() {
       id="features"
       style={{
         padding: '6rem 1.5rem',
-        background: 'linear-gradient(180deg, #080808 0%, #0e0d0b 100%)',
+        background: 'linear-gradient(180deg, #f5f7f5 0%, #0e0d0b 100%)',
         textAlign: 'center',
       }}
     >
@@ -88,7 +88,7 @@ export default function Features() {
                 borderRadius: '10px',
                 background: 'rgba(255,255,255,0.03)',
                 backdropFilter: 'blur(12px)',
-                border: '1px solid rgba(212,175,55,0.12)',
+                border: '1px solid rgba(45, 125, 95,0.12)',
                 transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
                 cursor: 'default',
               }}
@@ -102,22 +102,22 @@ export default function Features() {
                 width: '60px',
                 height: '60px',
                 borderRadius: '50%',
-                background: 'rgba(212,175,55,0.08)',
-                border: '1px solid rgba(212,175,55,0.25)',
+                background: 'rgba(45, 125, 95,0.08)',
+                border: '1px solid rgba(45, 125, 95,0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 1.25rem',
-                boxShadow: '0 0 20px rgba(212,175,55,0.15)',
+                boxShadow: '0 0 20px rgba(45, 125, 95,0.15)',
               }}>
-                <Icon size={26} color="#D4AF37" />
+                <Icon size={26} color="#2D7D5F" />
               </div>
 
               <h3 style={{
-                fontFamily: '"Cormorant Garamond", serif',
+                fontFamily: '"Playfair Display", serif',
                 fontSize: '1.3rem',
                 fontWeight: 500,
-                color: '#FFF8DC',
+                color: '#1a1a1a',
                 marginBottom: '0.6rem',
                 letterSpacing: '0.03em',
               }}>
