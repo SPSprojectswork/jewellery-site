@@ -85,7 +85,7 @@ export default function Contact() {
       id="contact"
       style={{
         padding: '7rem 1.5rem',
-        background: 'linear-gradient(180deg, #f5f7f5 0%, #0d0b07 50%, #f5f7f5 100%)',
+        background: 'transparent',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -99,7 +99,7 @@ export default function Contact() {
         transform: 'translate(-50%,-50%)',
         width: '600px',
         height: '300px',
-        background: 'radial-gradient(ellipse, rgba(45, 125, 95,0.07) 0%, transparent 70%)',
+        background: 'transparent',
         pointerEvents: 'none',
       }} />
 

@@ -31,7 +31,7 @@ function ParticleField({ count = 80 }) {
               width:  `${size}px`,
               height: `${size}px`,
               borderRadius: '50%',
-              background: `radial-gradient(circle, #3a9e7a, #2D7D5F)`,
+              background: 'transparent',
               opacity,
               animation: `particleDrift ${dur}s ${delay}s ease-in infinite`,
             }}
@@ -63,7 +63,7 @@ export default function Hero() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'radial-gradient(ellipse at 60% 40%, #1a120a 0%, #0d0d0d 40%, #f5f7f5 100%)',
+        background: 'transparent',
       }}
     >
       {/* 3D Canvas */}
@@ -79,7 +79,7 @@ export default function Hero() {
           position: 'absolute',
           inset: 0,
           zIndex: 3,
-          background: 'radial-gradient(ellipse at center, transparent 30%, rgba(8,8,8,0.85) 100%)',
+          background: 'transparent',
           pointerEvents: 'none',
         }}
       />

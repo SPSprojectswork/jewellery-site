@@ -162,7 +162,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      style={{ padding: '6rem 1.5rem', background: '#f5f7f5', textAlign: 'center' }}
+      style={{ padding: '6rem 1.5rem', background: 'transparent', textAlign: 'center' }}
     >
       {/* Header */}
       <motion.div

@@ -63,7 +63,6 @@ export default function ProductCard({ name, image, description, index = 0 }) {
           boxShadow: isHovered
             ? '0 0 35px rgba(45, 125, 95,0.45), 0 20px 60px rgba(0,0,0,0.7), inset 0 0 25px rgba(45, 125, 95,0.06)'
             : '0 8px 32px rgba(0,0,0,0.5), inset 0 0 10px rgba(45, 125, 95,0.03)',
-          transition: 'box-shadow 0.4s ease, border-color 0.4s ease, transform 0.05s linear',
         }}
       >
         {/* Product Image */}

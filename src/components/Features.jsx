@@ -45,7 +45,7 @@ export default function Features() {
       id="features"
       style={{
         padding: '6rem 1.5rem',
-        background: 'linear-gradient(180deg, #f5f7f5 0%, #0e0d0b 100%)',
+        background: 'transparent',
         textAlign: 'center',
       }}
     >

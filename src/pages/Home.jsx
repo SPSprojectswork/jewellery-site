@@ -45,7 +45,7 @@ export default function Home() {
         id="products"
         style={{ 
           padding: '8rem 1.5rem', 
-          background: 'radial-gradient(ellipse at top, #111 0%, #f5f7f5 100%)',
+          background: 'transparent',
           textAlign: 'center'
         }}
       >
