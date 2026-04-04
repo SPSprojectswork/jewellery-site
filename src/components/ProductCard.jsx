@@ -7,9 +7,7 @@ import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, Sparkles } from 'lucide-react'
 
-const WHATSAPP_NUMBER = '919999999999' // ← Replace with your WhatsApp number
-
-export default function ProductCard({ name, image, description, index = 0 }) {
+export default function ProductCard({ name, image, description, index = 0, onImageClick }) {
   const cardRef = useRef(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
@@ -29,9 +27,8 @@ export default function ProductCard({ name, image, description, index = 0 }) {
     setIsHovered(false)
   }
 
-  const handleAskDetails = () => {
-    const msg = encodeURIComponent(`Hi! I'm interested in the "${name}". Could you share more details?`)
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank')
+  const handleAboutMore = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -56,17 +53,20 @@ export default function ProductCard({ name, image, description, index = 0 }) {
           cursor: 'pointer',
           transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
           transition: isHovered ? 'transform 0.05s linear' : 'transform 0.5s ease',
-          background: 'rgba(255,255,255,0.04)',
+          background: '#ffffff',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           border: `1px solid ${isHovered ? 'rgba(45, 125, 95,0.55)' : 'rgba(45, 125, 95,0.18)'}`,
           boxShadow: isHovered
-            ? '0 0 35px rgba(45, 125, 95,0.45), 0 20px 60px rgba(0,0,0,0.7), inset 0 0 25px rgba(45, 125, 95,0.06)'
-            : '0 8px 32px rgba(0,0,0,0.5), inset 0 0 10px rgba(45, 125, 95,0.03)',
+            ? '0 0 35px rgba(45, 125, 95,0.45), 0 20px 60px rgba(0,0,0,0.1), inset 0 0 25px rgba(45, 125, 95,0.06)'
+            : '0 8px 32px rgba(0,0,0,0.1), inset 0 0 10px rgba(45, 125, 95,0.03)',
         }}
       >
         {/* Product Image */}
-        <div style={{ position: 'relative', width: '100%', height: '260px', overflow: 'hidden' }}>
+        <div 
+          onClick={onImageClick ? () => onImageClick(image) : undefined}
+          style={{ position: 'relative', width: '100%', height: '260px', overflow: 'hidden' }}
+        >
           <img
             src={image}
             alt={name}
@@ -116,20 +116,10 @@ export default function ProductCard({ name, image, description, index = 0 }) {
 
         {/* Card Body */}
         <div style={{ padding: '1.5rem' }}>
-          <h3 style={{
-            fontFamily: '"Playfair Display", serif',
-            fontSize: '1.5rem',
-            fontWeight: 400,
-            color: '#1a1a1a',
-            marginBottom: '0.5rem',
-            letterSpacing: '0.02em',
-          }}>
-            {name}
-          </h3>
           {description && (
             <p style={{
               fontSize: '0.82rem',
-              color: 'rgba(245,230,202,0.6)',
+              color: '#666666',
               marginBottom: '1.2rem',
               lineHeight: 1.6,
             }}>
@@ -142,7 +132,7 @@ export default function ProductCard({ name, image, description, index = 0 }) {
 
           {/* CTA Button */}
           <button
-            onClick={handleAskDetails}
+            onClick={handleAboutMore}
             style={{
               width: '100%',
               display: 'flex',
@@ -173,7 +163,7 @@ export default function ProductCard({ name, image, description, index = 0 }) {
             }}
           >
             <MessageCircle size={15} />
-            Ask for Details
+            About More
           </button>
         </div>
       </div>

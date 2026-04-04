@@ -6,7 +6,6 @@
 import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Gem, ArrowRight } from 'lucide-react'
-import ThreeScene from './ThreeScene.jsx'
 
 /* ── Gold Particle Field ───────────────────────────────── */
 function ParticleField({ count = 80 }) {
@@ -66,8 +65,7 @@ export default function Hero() {
         background: 'transparent',
       }}
     >
-      {/* 3D Canvas */}
-      <ThreeScene />
+      {/* 3D Canvas removed */}
 
       {/* Particle field */}
       <ParticleField count={80} />
@@ -117,9 +115,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          style={{ marginBottom: '1rem', fontSize: 'clamp(2.8rem, 8vw, 5.5rem)' }}
+          style={{ 
+            marginBottom: '1rem', 
+            fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
+            WebkitTextStroke: '1px #ffffff'
+          }}
         >
-          Luxury Handcrafted<br />Jewellery
+          Luxury Gold Plated<br />Handcraft
         </motion.h1>
 
         {/* Sub heading */}
@@ -132,7 +134,7 @@ export default function Hero() {
             fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
             fontWeight: 300,
             fontStyle: 'italic',
-            color: '#6b7280',
+            color: '#ffffff',
             marginBottom: '2.5rem',
             letterSpacing: '0.02em',
             lineHeight: 1.6,
