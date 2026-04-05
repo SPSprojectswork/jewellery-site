@@ -25,10 +25,10 @@ function ParticleField({ count = 80 }) {
       style={{ position: 'absolute', inset: 0, zIndex: 2, overflow: 'hidden', pointerEvents: 'none' }}
     >
       {Array.from({ length: count }).map((_, i) => {
-        const size    = Math.random() * 3 + 1
-        const left    = Math.random() * 100
-        const delay   = Math.random() * 12
-        const dur     = 8 + Math.random() * 10
+        const size = Math.random() * 3 + 1
+        const left = Math.random() * 100
+        const delay = Math.random() * 12
+        const dur = 8 + Math.random() * 10
         const opacity = 0.3 + Math.random() * 0.5
         return (
           <span
@@ -36,8 +36,8 @@ function ParticleField({ count = 80 }) {
             style={{
               position: 'absolute',
               bottom: `-${size * 2}px`,
-              left:   `${left}%`,
-              width:  `${size}px`,
+              left: `${left}%`,
+              width: `${size}px`,
               height: `${size}px`,
               borderRadius: '50%',
               background: 'transparent',
@@ -77,21 +77,21 @@ export default function Hero() {
       }}
     >
       {/* Logo — top-left, smaller on mobile */}
-      <img 
-        src={`${import.meta.env.BASE_URL}logo.png`} 
-        alt="Pearlyn Logo" 
-        style={{ 
+      <img
+        src={`${import.meta.env.BASE_URL}logo.png`}
+        alt="Pearlyn Logo"
+        style={{
           position: 'absolute',
           top: isMobile ? '16px' : '28px',
           left: isMobile ? '16px' : '28px',
           zIndex: 50,
-          height: isMobile ? '68px' : '110px', 
-          width:  isMobile ? '68px' : '110px',
+          height: isMobile ? '68px' : '110px',
+          width: isMobile ? '68px' : '110px',
           objectFit: 'cover',
           borderRadius: '50%',
           border: '2px solid #ffffff',
           boxShadow: '0 0 14px rgba(0,0,0,0.25)',
-        }} 
+        }}
       />
 
       {/* 3D Canvas removed */}
@@ -139,7 +139,7 @@ export default function Hero() {
             <Gem size={14} color="#2D7D5F" />
             <span className="section-sub">
               <span style={{ fontFamily: '"Great Vibes", cursive', fontSize: '1.8rem', textTransform: 'none', letterSpacing: 'normal', color: '#ffffff', fontWeight: '400', paddingRight: '6px' }}>pearlyn accessories</span>
-              · Est. Craftsmanship · Since 2005
+              · Est. Craftsmanship · Since 2024
             </span>
             <Gem size={14} color="#2D7D5F" />
           </div>
@@ -151,8 +151,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          style={{ 
-            marginBottom: '1rem', 
+          style={{
+            marginBottom: '1rem',
             fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
             WebkitTextStroke: '1px #ffffff'
           }}

@@ -31,7 +31,7 @@ const FEATURES = [
 ]
 
 const cardVariants = {
-  hidden:  { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 40 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
@@ -58,7 +58,7 @@ export default function Features() {
         style={{ marginBottom: '3.5rem' }}
       >
         <p className="section-sub" style={{ marginBottom: '0.75rem' }}>Our Promise</p>
-        <h2 className="section-heading">Why Our Jewellery</h2>
+        <h2 className="section-heading">Why Our Products</h2>
         <div className="divider-gold" />
       </motion.div>
 

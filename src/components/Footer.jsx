@@ -34,7 +34,7 @@ export default function Footer() {
           color: 'rgba(245,230,202,0.6)',
           marginBottom: '2.5rem',
         }}>
-          Elegant jewellery crafted to shine.
+          Elegant accessories crafted to shine.
         </p>
 
         {/* Links / Socials Grid */}

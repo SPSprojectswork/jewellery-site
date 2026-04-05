@@ -9,8 +9,8 @@ import { MessageCircle, Instagram, Phone, Sparkles } from 'lucide-react'
 
 /* ── Update these with real contact details ──────────────── */
 const WHATSAPP_NUMBER = '916379892595'
-const INSTAGRAM_URL   = 'https://ig.me/m/pearlyn.co_'
-const PHONE_NUMBER    = 'tel:+916379892595'
+const INSTAGRAM_URL = 'https://ig.me/m/pearlyn.co_'
+const PHONE_NUMBER = 'tel:+916379892595'
 
 const BUTTONS = [
   {
@@ -130,7 +130,7 @@ export default function Contact() {
         <p className="section-sub" style={{ marginBottom: '1rem', color: '#1a1a1a' }}>Get in Touch</p>
 
         <h2 className="section-heading" style={{ marginBottom: '0.75rem', color: '#1a1a1a' }}>
-          Interested in our jewellery?
+          Interested in our products?
         </h2>
 
         <p style={{
