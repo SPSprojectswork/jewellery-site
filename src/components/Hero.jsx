@@ -131,33 +131,34 @@ export default function Hero() {
             flexDirection: 'column',
             alignItems: 'center',
             gap: '12px',
-            marginBottom: '1.5rem',
+            marginBottom: '0.5rem',
           }}
         >
-
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
             <Gem size={14} color="#2D7D5F" />
             <span className="section-sub">
-              <span style={{ fontFamily: '"Great Vibes", cursive', fontSize: '1.8rem', textTransform: 'none', letterSpacing: 'normal', color: '#ffffff', fontWeight: '400', paddingRight: '6px' }}>pearlyn accessories</span>
-              · Est. Craftsmanship · Since 2024
+              EST. CRAFTSMANSHIP · SINCE 2024
             </span>
             <Gem size={14} color="#2D7D5F" />
           </div>
         </motion.div>
 
-        {/* Main heading */}
+        {/* Main Heading - Pearlyn Accessories */}
         <motion.h1
-          className="section-heading text-gold-gradient"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
           style={{
-            marginBottom: '1rem',
-            fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-            WebkitTextStroke: '1px #ffffff'
+            marginBottom: '1.5rem',
+            fontFamily: '"Great Vibes", cursive',
+            fontSize: 'clamp(3.5rem, 12vw, 6.5rem)',
+            color: '#ffffff',
+            letterSpacing: '0.02em',
+            lineHeight: 1.2,
+            textShadow: '0 4px 12px rgba(0,0,0,0.2)',
           }}
         >
-          Luxury Gold Plated<br />Handcraft
+          pearlyn accessories
         </motion.h1>
 
         {/* Sub heading */}
