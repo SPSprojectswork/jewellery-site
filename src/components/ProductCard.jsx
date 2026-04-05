@@ -1,16 +1,27 @@
 // =========================================================
 // src/components/ProductCard.jsx
-// Glassmorphism card with 3D mouse-tilt effect,
-// gold glow border, floating animation, WhatsApp CTA.
+// Desktop: Glassmorphism 3D tilt card
+// Mobile:  Compact 2-col grid card (cute.co style)
 // =========================================================
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, Sparkles } from 'lucide-react'
 
-export default function ProductCard({ name, image, description, index = 0, onImageClick }) {
+function useIsMobile() {
+  const [mobile, setMobile] = useState(() => window.innerWidth < 640)
+  useEffect(() => {
+    const fn = () => setMobile(window.innerWidth < 640)
+    window.addEventListener('resize', fn)
+    return () => window.removeEventListener('resize', fn)
+  }, [])
+  return mobile
+}
+
+export default function ProductCard({ name, image, description, index = 0, onImageClick, category }) {
   const cardRef = useRef(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
+  const isMobile = useIsMobile()
 
   /* ── 3D Tilt on mouse move ──────────────────────────── */
   const handleMouseMove = (e) => {
@@ -31,6 +42,81 @@ export default function ProductCard({ name, image, description, index = 0, onIma
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  /* ── Mobile compact card (cute.co style) ─────────────── */
+  if (isMobile) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
+        style={{ width: '100%' }}
+      >
+        <div
+          ref={cardRef}
+          style={{
+            width: '100%',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            background: '#ffffff',
+            cursor: 'pointer',
+          }}
+        >
+          {/* Product Image */}
+          <div
+            onClick={onImageClick ? () => onImageClick(image) : handleAboutMore}
+            style={{ position: 'relative', width: '100%', paddingBottom: '100%', overflow: 'hidden' }}
+          >
+            <img
+              src={image}
+              alt={name}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+              onError={(e) => {
+                e.target.style.display = 'none'
+                e.target.parentNode.style.background =
+                  'linear-gradient(135deg, #e8f5f0 0%, #c8e8dc 100%)'
+              }}
+            />
+          </div>
+          {/* Name + CTA — name hidden (filenames are ugly) */}
+          <div style={{ padding: '6px 4px 6px 4px' }}>
+            <button
+              onClick={handleAboutMore}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                padding: '6px 10px',
+                background: 'linear-gradient(135deg, #2D7D5F, #3a9e7a)',
+                color: '#ffffff',
+                fontSize: '0.68rem',
+                fontFamily: '"Courier New", sans-serif',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                border: 'none',
+                borderRadius: '3px',
+                cursor: 'pointer',
+                width: '100%',
+                justifyContent: 'center',
+              }}
+            >
+              <MessageCircle size={11} />
+              Order
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    )
+  }
+
+  /* ── Desktop rich card ───────────────────────────────── */
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -78,7 +164,6 @@ export default function ProductCard({ name, image, description, index = 0, onIma
               transition: 'transform 0.6s ease',
             }}
             onError={(e) => {
-              // Fallback gradient if image missing
               e.target.style.display = 'none'
               e.target.parentNode.style.background =
                 'linear-gradient(135deg, #1a120a 0%, #2a1f0a 50%, #1a1200 100%)'

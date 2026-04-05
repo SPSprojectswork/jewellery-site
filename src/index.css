@@ -204,3 +204,28 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
+
+/* ── Products Grid ───────────────────────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Mobile: 2-column compact grid like cute.co */
+@media (max-width: 639px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    justify-items: stretch;
+  }
+}
+
+/* ── Category Tab Bar ────────────────────────────────────── */
+/* Hide scrollbar but keep scrollability */
+.category-tabs::-webkit-scrollbar { display: none; }
+

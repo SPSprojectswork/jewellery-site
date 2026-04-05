@@ -113,12 +113,12 @@ export default function Contact() {
           maxWidth: '640px',
           margin: '0 auto',
           padding: '3.5rem 2.5rem',
-          background: 'rgba(255,255,255,0.03)',
+          background: 'rgba(232, 245, 240, 0.92)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(45, 125, 95,0.15)',
+          border: '1px solid rgba(45, 125, 95,0.25)',
           borderRadius: '12px',
-          boxShadow: '0 0 60px rgba(45, 125, 95,0.08), 0 20px 60px rgba(0,0,0,0.5)',
+          boxShadow: 'none',
           position: 'relative',
         }}
       >
@@ -127,20 +127,20 @@ export default function Contact() {
           <Sparkles size={28} color="#2D7D5F" style={{ animation: 'pulse-gold 2s ease-in-out infinite' }} />
         </div>
 
-        <p className="section-sub" style={{ marginBottom: '1rem' }}>Get in Touch</p>
+        <p className="section-sub" style={{ marginBottom: '1rem', color: '#1a1a1a' }}>Get in Touch</p>
 
-        <h2 className="section-heading" style={{ marginBottom: '0.75rem' }}>
-          Courier Newested in this design?
+        <h2 className="section-heading" style={{ marginBottom: '0.75rem', color: '#1a1a1a' }}>
+          Interested in our jewellery?
         </h2>
 
         <p style={{
           fontFamily: '"Playfair Display", serif',
-          fontSize: '1.25rem',
+          fontSize: '1.1rem',
           fontStyle: 'italic',
           fontWeight: 300,
-          color: '#6b7280',
+          color: '#1a1a1a',
           marginBottom: '2rem',
-          opacity: 0.8,
+          opacity: 0.85,
         }}>
           Contact us to place your order.
         </p>

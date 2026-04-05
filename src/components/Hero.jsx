@@ -3,9 +3,19 @@
 // Full-screen hero with 3D scene, particle field,
 // luxury heading, CTA buttons, scroll indicator.
 // =========================================================
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Gem, ArrowRight } from 'lucide-react'
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(() => window.innerWidth < 640)
+  useEffect(() => {
+    const fn = () => setMobile(window.innerWidth < 640)
+    window.addEventListener('resize', fn)
+    return () => window.removeEventListener('resize', fn)
+  }, [])
+  return mobile
+}
 
 /* ── Gold Particle Field ───────────────────────────────── */
 function ParticleField({ count = 80 }) {
@@ -43,6 +53,7 @@ function ParticleField({ count = 80 }) {
 
 /* ── Hero ──────────────────────────────────────────────── */
 export default function Hero() {
+  const isMobile = useIsMobile()
   const handleViewCollection = () => {
     document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -65,21 +76,21 @@ export default function Hero() {
         background: 'transparent',
       }}
     >
-      {/* Logo in top-left corner */}
+      {/* Logo — top-left, smaller on mobile */}
       <img 
         src={`${import.meta.env.BASE_URL}logo.png`} 
         alt="Pearlyn Logo" 
         style={{ 
           position: 'absolute',
-          top: '40px',
-          left: '40px',
+          top: isMobile ? '16px' : '28px',
+          left: isMobile ? '16px' : '28px',
           zIndex: 50,
-          height: '140px', 
-          width: '140px',
+          height: isMobile ? '68px' : '110px', 
+          width:  isMobile ? '68px' : '110px',
           objectFit: 'cover',
           borderRadius: '50%',
           border: '2px solid #ffffff',
-          boxShadow: '0 0 20px rgba(0,0,0,0.3)',
+          boxShadow: '0 0 14px rgba(0,0,0,0.25)',
         }} 
       />
 
