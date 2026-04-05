@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pearlyn accessories — Page Not Found</title>
+    <meta name="description" content="The page you're looking for could not be found. Redirecting to pearlyn accessories..." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- GitHub Pages SPA Redirect Script -->
+    <script>
+      // This script redirects 404s back to the index.html with the path preserved as a query param.
+      // The main app's index.html has a corresponding script that reads this and restores the URL.
+      (function () {
+        var segmentCount = 1; // depth of your repo name: '/jewellery-site/' = 1 segment
+        var l = window.location;
+        var path = l.pathname.slice(1).split('/').slice(segmentCount).join('/');
+        var search = l.search ? '&q=' + l.search.slice(1) : '';
+        var hash = l.hash ? '&h=' + l.hash.slice(1) : '';
+        var redirect = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + segmentCount).join('/') +
+          '/?p=/' + path + search + hash;
+        setTimeout(function () { l.replace(redirect); }, 2000);
+      })();
+    </script>
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2D7D5F 0%, #3a9e7a 60%, #ffffff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Courier New", system-ui, sans-serif;
+        color: #ffffff;
+        overflow: hidden;
+      }
+
+      /* Animated background rings */
+      .bg-ring {
+        position: fixed;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.12);
+        animation: expandRing 4s ease-out infinite;
+      }
+      .bg-ring:nth-child(1) { width: 300px; height: 300px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: 0s; }
+      .bg-ring:nth-child(2) { width: 500px; height: 500px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: 1s; }
+      .bg-ring:nth-child(3) { width: 700px; height: 700px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: 2s; }
+
+      @keyframes expandRing {
+        0%   { opacity: 0.6; transform: translate(-50%,-50%) scale(0.8); }
+        100% { opacity: 0;   transform: translate(-50%,-50%) scale(1.5); }
+      }
+
+      /* Card */
+      .card {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 4rem 3rem;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 16px;
+        max-width: 480px;
+        width: 90%;
+        animation: fadeInUp 0.7s ease both;
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Gem icon */
+      .gem {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        animation: gemFloat 3s ease-in-out infinite;
+        display: block;
+      }
+      @keyframes gemFloat {
+        0%, 100% { transform: translateY(0px); }
+        50%       { transform: translateY(-10px); }
+      }
+
+      /* Brand name */
+      .brand {
+        font-family: "Great Vibes", cursive;
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        opacity: 0.85;
+      }
+
+      /* 404 number */
+      .error-code {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(4rem, 15vw, 7rem);
+        font-weight: 700;
+        color: rgba(255,255,255,0.15);
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
+
+      p {
+        font-size: 0.88rem;
+        color: rgba(255,255,255,0.75);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        letter-spacing: 0.02em;
+      }
+
+      /* Divider */
+      .divider {
+        width: 60px;
+        height: 1px;
+        background: rgba(255,255,255,0.4);
+        margin: 1rem auto 1.5rem;
+      }
+
+      /* Progress bar */
+      .progress-wrap {
+        background: rgba(255,255,255,0.15);
+        border-radius: 999px;
+        height: 3px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+      }
+      .progress-bar {
+        height: 100%;
+        background: #ffffff;
+        border-radius: 999px;
+        animation: fill 2s linear forwards;
+      }
+      @keyframes fill {
+        from { width: 0%; }
+        to   { width: 100%; }
+      }
+
+      /* Button */
+      .btn {
+        display: inline-block;
+        padding: 12px 32px;
+        background: #ffffff;
+        color: #2D7D5F;
+        font-family: "Courier New", sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      }
+
+      .redirect-note {
+        margin-top: 1.5rem;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.5);
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated background rings -->
+    <div class="bg-ring"></div>
+    <div class="bg-ring"></div>
+    <div class="bg-ring"></div>
+
+    <div class="card">
+      <span class="gem">💎</span>
+      <div class="brand">pearlyn accessories</div>
+      <div class="divider"></div>
+      <div class="error-code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for doesn't exist or has been moved.<br/>
+         Redirecting you back to our collection…</p>
+
+      <div class="progress-wrap">
+        <div class="progress-bar"></div>
+      </div>
+
+      <a href="/jewellery-site/" class="btn">Return to Collection</a>
+      <p class="redirect-note">You will be redirected automatically in 2 seconds</p>
+    </div>
+  </body>
+</html>
